@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,7 +17,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档：2020 - Pani blog</title>
+  <title>JS-高级编程-函数表达式 - Pani blog</title>
   
 
   
@@ -327,7 +325,7 @@
   
     
     
-        <div class='cover-wrapper  dock' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"></div>
           
@@ -409,8 +407,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">JS-高级编程-函数表达式</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -419,14 +417,14 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("half" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("half" == "half") { // 半屏 
+    if ("none" == "half") { // 半屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("half" == "full") { // 全屏 
+    } else if ("none" == "full") { // 全屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
     } 
@@ -440,119 +438,222 @@
         
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-      
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
     
-    <h2 class="article-title" >
-      <a href="/2020/09/28/JS-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+      <h1 class="title">
         JS-高级编程-函数表达式
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        基础知识函数声明提升1234functionA();function functionA() &#123;  console.log(&quot;Hi!&quot;)&#125;
-
-在执行代码之前会先读取函数声明，所以说函数声明语句可以放在调用函数语句的后面。
-声明函数还有另外一种方式，叫做函数表达式
-123let functionA = function () &#123;  // 函数体...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      </h1>
+      <div class='new-meta-box'>
         
-        <time>2020-09-28</time>
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 28, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="JS-高级编程-函数表达式" data-path="/2020/09/28/JS-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="函数声明提升"><a href="#函数声明提升" class="headerlink" title="函数声明提升"></a>函数声明提升</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">functionA();</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionA</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;Hi!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在执行代码之前会先读取函数声明，所以说函数声明语句可以放在调用函数语句的后面。</p>
+<p>声明函数还有另外一种方式，叫做函数表达式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> functionA = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 函数体</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这种声明的函数叫做<code>匿名函数</code>，也叫做拉姆达函数</p>
+<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(num &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> num * factorial(num<span class="number">-1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> otherFactorial = factorial;</span><br><span class="line">factorial = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(otherFactorial(<span class="number">5</span>)); <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+
+<p>这是为什么报错呢？因为，我们将factorial函数体内容给了otherFactorial了，并且将factorial指向为空，当调用该函数的时候，必须要调用factorial才能完成递归过程，所以factorial并不存在了，所以导致了报错。</p>
+<p>那我们可以通过什么途径解决呢？可以使用<code>arguments.callee()</code>来获取正在执行的函数的指针。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(num &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> num * <span class="built_in">arguments</span>.callee(num<span class="number">-1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>在严格模式下arguments.callee</code>是无法使用的，可以使用下面命名函数的方式代替。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> factorial = ( <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(num &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> num * f(num<span class="number">-1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2020/09/28/JS-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F/'>
-            阅读全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://paniuncle.github.io/2020/09/28/JS-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F/>https://paniuncle.github.io/2020/09/28/JS-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-29T19:26:38+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Sep 29, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/09/28/JS-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E5%8E%9F%E5%9E%8B/">
-        JS-高级编程-原型
-      </a>
-    </h2>
-  
-  <div class='md'>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        基础知识原型创建的每一个函数都有一个prototype（原型）属性，这个属性是一个指针，指向了一个对象。所有由此函数用new操作符创建出的对象都共享此原型（属性、方法）。
-原型对象任何一个新函数，就会根据一组特定的规则为该函数创建一个prototype属性，这个属性指向函数的原型对象。默认情况下，所有的原型对象都会自动获得一个constructor属性，这个属性指向的是prototype属性...
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://paniuncle.github.io/2020/09/28/JS-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F/&title=JS-高级编程-函数表达式 - Pani blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://paniuncle.github.io/2020/09/28/JS-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F/&title=JS-高级编程-函数表达式 - Pani blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://paniuncle.github.io/2020/09/28/JS-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F/&title=JS-高级编程-函数表达式 - Pani blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
       
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</div>
+
+
+
         
-        <time>2020-09-28</time>
-        
-      </div>
       
-        <div>
-          <a class='readmore' href='/2020/09/28/JS-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E5%8E%9F%E5%9E%8B/'>
-            阅读全文
-          </a>
-        </div>
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2020/09/28/JS-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E5%8E%9F%E5%9E%8B/'>
+          <p class='title'>JS-高级编程-原型<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>基础知识原型创建的每一个函数都有一个prototype（原型）属性，这个属性是一个指针，指向了一个对象。所有由此函数用new操作符创建出的对象都共享此原型（属性、方法）。
+原型对象任何一个新函数...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -560,87 +661,28 @@
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Pani blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
+  <header>
     
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
 
-  
 
-  
-    
-    
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87"><span class="toc-text">函数声明提升</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%92%E5%BD%92"><span class="toc-text">递归</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
-  
 
   
 
 
 </aside>
+
 
 
         
